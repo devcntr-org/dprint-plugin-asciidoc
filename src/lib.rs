@@ -1,15 +1,19 @@
 pub mod configuration;
 pub mod format;
 
+#[cfg(target_arch = "wasm32")]
 use configuration::{Configuration, resolve_config};
+#[cfg(target_arch = "wasm32")]
 use dprint_core::configuration::ConfigKeyMap;
+#[cfg(target_arch = "wasm32")]
 use dprint_core::plugins::{PluginInfo, SyncPluginHandler, SyncFormatRequest, SyncHostFormatRequest, FormatResult, PluginResolveConfigurationResult, CheckConfigUpdatesMessage, ConfigChange};
-
 #[cfg(target_arch = "wasm32")]
 use dprint_core::generate_plugin_code;
 
+#[cfg(target_arch = "wasm32")]
 struct AsciiDocPluginHandler;
 
+#[cfg(target_arch = "wasm32")]
 impl SyncPluginHandler<Configuration> for AsciiDocPluginHandler {
     fn resolve_config(&mut self, config: ConfigKeyMap, global_config: &dprint_core::configuration::GlobalConfiguration) -> PluginResolveConfigurationResult<Configuration> {
         let config_value = serde_json::to_value(config).unwrap_or(serde_json::Value::Object(serde_json::Map::new()));
@@ -48,6 +52,7 @@ impl SyncPluginHandler<Configuration> for AsciiDocPluginHandler {
     }
 }
 
+#[cfg(target_arch = "wasm32")]
 impl AsciiDocPluginHandler {
     pub const fn new() -> Self {
         AsciiDocPluginHandler
@@ -56,15 +61,3 @@ impl AsciiDocPluginHandler {
 
 #[cfg(target_arch = "wasm32")]
 generate_plugin_code!(AsciiDocPluginHandler, AsciiDocPluginHandler::new());
-
-#[cfg(not(target_arch = "wasm32"))]
-fn main() {
-    use std::io::stdout;
-    use schemars::schema_for;
-
-    let schema = schema_for!(Configuration);
-    serde_json::to_writer_pretty(stdout(), &schema).unwrap();
-}
-
-#[cfg(target_arch = "wasm32")]
-fn main() {}
