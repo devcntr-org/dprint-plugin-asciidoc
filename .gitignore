@@ -1,0 +1,36 @@
+dist
+.wrangler
+.output
+app.config.timestamp_*.js
+
+# Environment
+.env
+.env*.local
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# Temp
+gitignore
+
+# System Files
+.DS_Store
+Thumbs.db
+
+local.db
+local.db-journal
+
+
+# Added by cargo
+/target
+
+*.log
+.vscode/
+.history/
