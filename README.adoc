@@ -9,7 +9,7 @@ toc::[]
 
 == Overview
 
-This plugin provides formatting for AsciiDoc files using dprint. It uses the `acdc-parser` to ensure structural integrity and consistent formatting across your AsciiDoc documentation.
+This plugin provides formatting for AsciiDoc files using dprint. It uses the link:https://github.com/scouten/asciidoc-parser[asciidoc-parser] crate for parsing and validation.
 
 == Installation
 
@@ -65,21 +65,57 @@ You can configure the plugin in the `asciidoc` object of your `dprint.jsonc`:
 
 === Schema
 
-The configuration schema is available at link:schema.json[schema.json]. This file is used to generate documentation and provide intelligent code completion in editors.
+The configuration schema is available at link:schema.json[schema.json]. This file is **auto-generated** from the Rust configuration struct and is used for documentation and intelligent code completion in editors.
+
+To regenerate the schema:
+
+[source,powershell]
+----
+cargo run --bin generate-schema > schema.json
+----
 
 == Development
 
+=== Project Structure
+
+* `src/lib.rs` - WASM plugin implementation (dprint plugin handler)
+* `src/main.rs` - Schema generator binary
+* `src/configuration.rs` - Configuration struct and resolution
+* `src/format.rs` - AsciiDoc formatting logic
+
 === Build
 
-To build the plugin WASM file:
+To build everything (WASM plugin + schema):
 
 [source,powershell]
 ----
 .\build.ps1
 ----
 
-This will compile the Rust source to `wasm32-unknown-unknown` and output the binary to:
-`target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm`
+==== Manual Build
+
+To build only the WASM plugin:
+
+[source,powershell]
+----
+cargo build --release --target wasm32-unknown-unknown
+----
+
+Output: `target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm`
+
+To generate only the schema:
+
+[source,powershell]
+----
+cargo run --bin generate-schema > schema.json
+----
+
+=== Testing
+
+[source,powershell]
+----
+cargo test
+----
 
 == License
 
