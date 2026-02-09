@@ -1,0 +1,82 @@
+= dprint-plugin-asciidoc
+:icons: font
+:toc: macro
+:toc-title:
+
+An link:https://dprint.dev[dprint] plugin for link:https://asciidoc.org[AsciiDoc] files.
+
+toc::[]
+
+== Overview
+
+This plugin provides formatting for AsciiDoc files using dprint. It uses the `acdc-parser` to ensure structural integrity and consistent formatting across your AsciiDoc documentation.
+
+== Installation
+
+To use this plugin, add it to your `dprint.jsonc` file:
+
+[source,jsonc]
+----
+{
+  "plugins": [
+    "https://plugins.dprint.dev/asciidoc-0.1.0.wasm"
+  ]
+}
+----
+
+== Configuration
+
+You can configure the plugin in the `asciidoc` object of your `dprint.jsonc`:
+
+[source,jsonc]
+----
+{
+  "asciidoc": {
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "useTabs": false,
+    "newLineKind": "lf"
+  }
+}
+----
+
+=== Options
+
+[cols="1,1,2"]
+|===
+| Property | Default | Description
+
+| `lineWidth`
+| `80`
+| The maximum number of characters per line.
+
+| `indentWidth`
+| `2`
+| The number of spaces to use for indentation.
+
+| `useTabs`
+| `false`
+| Whether to use tabs for indentation.
+
+| `newLineKind`
+| `"lf"`
+| The type of newline character to use (`"lf"`, `"crlf"`, or `"system"`).
+|===
+
+== Development
+
+=== Build
+
+To build the plugin WASM file:
+
+[source,powershell]
+----
+.\build.ps1
+----
+
+This will compile the Rust source to `wasm32-unknown-unknown` and output the binary to:
+`target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm`
+
+== License
+
+link:LICENSE[MIT License]
