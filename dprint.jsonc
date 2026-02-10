@@ -17,5 +17,9 @@
     "https://plugins.dprint.dev/json-0.21.1.wasm",
     "https://plugins.dprint.dev/markdown-0.20.0.wasm",
     "https://plugins.dprint.dev/toml-0.7.0.wasm",
+    "https://github.com/the-dev-center/dprint-plugin-asciidoc/releases/download/v0.1.0/dprint-plugin-asciidoc-0.1.0.wasm",
   ],
+  "asciidoc": {
+    "lineWidth": 120,
+  },
 }
