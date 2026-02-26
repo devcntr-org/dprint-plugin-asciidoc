@@ -14,7 +14,7 @@ I have created a dprint WASM plugin for formatting AsciiDoc files. The plugin is
 ### Build Pipeline
 
 - **build.ps1**: Added a PowerShell script to compile the plugin to `wasm32-unknown-unknown` in release mode.
-- **WASM binary**: Successfully generated at [target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm](file:///z:/code/the-dev-center/dprint-plugin-asciidoc/target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm).
+- **WASM binary**: Successfully generated at [target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm](file:///z:/code/devcntr-app/dprint-plugin-asciidoc/target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm).
 
 ## Verification Results
 
@@ -31,12 +31,12 @@ The plugin successfully compiles to WASM using the latest `dprint-core` API stan
 
 ### How to Use Local Plugin
 
-To use this plugin in your [dprint.jsonc](file:///z:/code/the-dev-center/dprint-plugin-asciidoc/dprint.jsonc) file, add the local path:
+To use this plugin in your [dprint.jsonc](file:///z:/code/devcntr-app/dprint-plugin-asciidoc/dprint.jsonc) file, add the local path:
 
 ```jsonc
 {
   "plugins": [
-    "file:///z:/code/the-dev-center/dprint-plugin-asciidoc/target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm",
+    "file:///z:/code/devcntr-app/dprint-plugin-asciidoc/target/wasm32-unknown-unknown/release/dprint_plugin_asciidoc.wasm",
   ],
   "asciidoc": {
     "lineWidth": 80,
@@ -46,4 +46,5 @@ To use this plugin in your [dprint.jsonc](file:///z:/code/the-dev-center/dprint-
 ```
 
 > [!NOTE]
-> The current version uses `acdc-parser` for structure verification. Complex formatting rules can be added to [src/format.rs](file:///z:/code/the-dev-center/dprint-plugin-asciidoc/src/format.rs) by traversing the AST.
+> The current version uses `acdc-parser` for structure verification. Complex formatting rules can be added to [src/format.rs](file:///z:/code/devcntr-app/dprint-plugin-asciidoc/src/format.rs) by traversing the AST.
+

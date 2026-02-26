@@ -17,7 +17,7 @@ const TARGET_PATH = path.join(PACKAGE_ROOT, WASM_FILENAME);
 const packageJson = require('./package.json');
 const VERSION = packageJson.version;
 
-const DOWNLOAD_URL = `https://github.com/the-dev-center/dprint-plugin-asciidoc/releases/download/v${VERSION}/dprint-plugin-asciidoc-${VERSION}.wasm`;
+const DOWNLOAD_URL = `https://github.com/devcntr-app/dprint-plugin-asciidoc/releases/download/v${VERSION}/dprint-plugin-asciidoc-${VERSION}.wasm`;
 
 function downloadFile(url, dest) {
   return new Promise((resolve, reject) => {
@@ -66,7 +66,7 @@ async function main() {
     console.error('Failed to download WASM plugin:', error.message);
     console.error('');
     console.error('You can manually download the plugin from:');
-    console.error(`  https://github.com/the-dev-center/dprint-plugin-asciidoc/releases/tag/v${VERSION}`);
+    console.error(`  https://github.com/devcntr-app/dprint-plugin-asciidoc/releases/tag/v${VERSION}`);
     console.error('');
     console.error('And place it at:');
     console.error(`  ${TARGET_PATH}`);

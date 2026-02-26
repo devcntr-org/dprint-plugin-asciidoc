@@ -17,17 +17,17 @@
   ],
   "author": "Antigravity",
   "license": "MIT",
-  "homepage": "https://github.com/the-dev-center/dprint-plugin-asciidoc#readme",
+  "homepage": "https://github.com/devcntr-org/dprint-plugin-asciidoc#readme",
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/the-dev-center/dprint-plugin-asciidoc.git"
+    "url": "git+https://github.com/devcntr-org/dprint-plugin-asciidoc.git"
   },
   "bugs": {
-    "url": "https://github.com/the-dev-center/dprint-plugin-asciidoc/issues"
+    "url": "https://github.com/devcntr-org/dprint-plugin-asciidoc/issues"
   },
   "files": [
     "index.js",
@@ -41,3 +41,4 @@
     "node": ">=14.0.0"
   }
 }
+
