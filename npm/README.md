@@ -12,7 +12,7 @@
   - Offer a quick start guide for JavaScript/Node.js developers
 
   For the main project documentation and development guide, see:
-  https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc/blob/main/README.adoc
+  https://github.com/antora-supplemental/dprint-plugin-asciidoc/blob/main/README.adoc
 
   Note: This file is published to npm and should remain focused on
   consumer usage, not development/build instructions.
@@ -21,7 +21,7 @@
 # dprint-plugin-asciidoc
 
 [![npm version](https://badge.fury.io/js/dprint-plugin-asciidoc.svg)](https://www.npmjs.com/package/dprint-plugin-asciidoc)
-[![CI](https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc/actions/workflows/ci.yml/badge.svg)](https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc/actions)
+[![CI](https://github.com/antora-supplemental/dprint-plugin-asciidoc/actions/workflows/ci.yml/badge.svg)](https://github.com/antora-supplemental/dprint-plugin-asciidoc/actions)
 
 > An [AsciiDoc](https://asciidoc.org) formatter plugin for [dprint](https://dprint.dev)
 
@@ -89,7 +89,7 @@ npx dprint check "**/*.adoc"
 
 ## License
 
-MIT - see [LICENSE](https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc/blob/main/LICENSE)
+MIT - see [LICENSE](https://github.com/antora-supplemental/dprint-plugin-asciidoc/blob/main/LICENSE)
 
 
 

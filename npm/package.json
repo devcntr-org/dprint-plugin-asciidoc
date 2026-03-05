@@ -17,17 +17,17 @@
   ],
   "author": "Antigravity",
   "license": "MIT",
-  "homepage": "https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc#readme",
+  "homepage": "https://github.com/antora-supplemental/dprint-plugin-asciidoc#readme",
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc.git"
+    "url": "git+https://github.com/antora-supplemental/dprint-plugin-asciidoc.git"
   },
   "bugs": {
-    "url": "https://github.com/asciidoc-supplemental/dprint-plugin-asciidoc/issues"
+    "url": "https://github.com/antora-supplemental/dprint-plugin-asciidoc/issues"
   },
   "files": [
     "index.js",
